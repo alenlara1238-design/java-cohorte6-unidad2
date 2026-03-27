@@ -1,5 +1,7 @@
 public class Short extends Contenido {
 
+    public Short(){}
+
     public Short(String titulo, String autor){
         //1. debo crear el Contenido: llamar al constructor de la clase padre.
         super(titulo); //regla de oro: primero debo llamar al constructor de la clase padre
@@ -11,7 +13,7 @@ public class Short extends Contenido {
     }
 
     void reproducir(int a){
-        System.out.println("f adcakjc" + a);
+        System.out.println("Reproduciendo short " + this.getTitulo());
     }
     
 }

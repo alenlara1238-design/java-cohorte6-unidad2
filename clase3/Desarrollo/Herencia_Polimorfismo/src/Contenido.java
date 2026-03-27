@@ -33,42 +33,29 @@ public abstract class Contenido {
         return duracion;
     }
 
-
     public void setDuracion(int duracion) {
         this.duracion = duracion;
     }
-
 
     public int getVistas() {
         return vistas;
     }
 
-
-
-
     public void setVistas(int vistas) {
         this.vistas = vistas;
     }
-
-
-
 
     public String getAutor() {
         return autor;
     }
 
-
-
-
     public void setAutor(String autor) {
         this.autor = autor;
     }
 
-
-
-
     //metodo comunes:
-    void reproducir(){
+    void reproducir(int x){
         System.out.println("Reproduciendo: " + this.titulo);
+        this.vistas++;
     }
 }

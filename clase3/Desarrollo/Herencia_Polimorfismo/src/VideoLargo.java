@@ -1,4 +1,4 @@
-public class VideoLargo extends Contenido {
+public class VideoLargo extends Contenido implements Monetizable{
    
     private int stats;
 
@@ -10,13 +10,8 @@ public class VideoLargo extends Contenido {
         super(autor, titulo);
     }
 
-    @Override
-    void reproducir(){
-        System.out.println("Reproduciendo video largo " + this.titulo + " con caracteristicas plus");
-    }
-
-    void reproducir(String mensaje){
-        System.out.println("reproduciendo con el mensaje: " + mensaje);
+    void reproducir(int x){
+        System.out.println("reproduciendo video largo" + this.getTitulo());
     }
 
     void adelantar(int n){
@@ -26,4 +21,9 @@ public class VideoLargo extends Contenido {
     public void miMetodoUnico(){
         System.out.println("efdfsddafaaasf");
     }
+
+    @Override
+    public void mostrarAnuncio() {
+        System.out.println("mostrando anuncio desde video largo...");
+     }
 }
