@@ -1,0 +1,36 @@
+@startuml
+
+class Estudiante {
+  -id: Long
+  -nombre: String
+  -registros: Registro[]
+}
+
+class Curso {
+  -id: Long
+  -nombre: String
+}
+
+class Profesor {
+    -id: Long
+    -nombre: String
+    -edad: int
+}
+class Leccion
+class Video
+
+class Registro {
+  -id: Long
+  -estudiante: Estudiante
+  -curso: Curso
+}
+
+Estudiante "1" -- "0..*" Registro
+Curso "1" -- "0..*" Registro
+
+Profesor "1" -- "0..*" Curso
+
+Curso "1" *-- "0..*" Leccion
+Leccion "1" *-- "0..*" Video
+
+@enduml
